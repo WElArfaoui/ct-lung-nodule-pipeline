@@ -1,4 +1,4 @@
-# lung-nodule-pipeline
+# ct-lung-nodule-pipeline
 
 Reproducible pipeline for **lung-nodule segmentation and quantification** on chest CT.
 
@@ -52,8 +52,8 @@ Python dependencies are listed in `requirements.txt` / `pyproject.toml`:
 ## Install
 
 ```bash
-git clone https://github.com/<your-org>/lung-nodule-pipeline.git
-cd lung-nodule-pipeline
+git clone https://github.com/WElArfaoui/ct-lung-nodule-pipeline.git
+cd ct-lung-nodule-pipeline
 
 python -m venv .venv && source .venv/bin/activate
 pip install -e .
@@ -216,6 +216,10 @@ If you use TotalSegmentator through this pipeline, please cite:
 
 ---
 
+## Author
+
+**Wasim El Arfaoui** — <elarfaouiwasim@gmail.com>
+
 ## License
 
-MIT — see [`LICENSE`](LICENSE).
+MIT — see [`LICENSE`](LICENSE). © 2026 Wasim El Arfaoui.

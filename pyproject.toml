@@ -3,14 +3,14 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "lung-nodule-pipeline"
+name = "ct-lung-nodule-pipeline"
 version = "0.1.0"
 description = "Reproducible pipeline for lung-nodule segmentation (TotalSegmentator) and quantification on chest CT."
 readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.10"
 authors = [
-    { name = "lung-nodule-pipeline contributors" },
+    { name = "Wasim El Arfaoui", email = "elarfaouiwasim@gmail.com" },
 ]
 keywords = ["medical-imaging", "lung-nodules", "ct", "segmentation", "totalsegmentator", "lung-rads"]
 classifiers = [
@@ -45,8 +45,8 @@ lnp-diameters = "lung_nodule_pipeline.compute_diameters:main"
 lnp-final-summary = "lung_nodule_pipeline.final_summary:main"
 
 [project.urls]
-Homepage = "https://github.com/your-org/lung-nodule-pipeline"
-Issues = "https://github.com/your-org/lung-nodule-pipeline/issues"
+Homepage = "https://github.com/WElArfaoui/ct-lung-nodule-pipeline"
+Issues = "https://github.com/WElArfaoui/ct-lung-nodule-pipeline/issues"
 
 [tool.setuptools.packages.find]
 where = ["src"]
