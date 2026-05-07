@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lung-nodule-pipeline"
+version = "0.1.0"
+description = "Reproducible pipeline for lung-nodule segmentation (TotalSegmentator) and quantification on chest CT."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [
+    { name = "lung-nodule-pipeline contributors" },
+]
+keywords = ["medical-imaging", "lung-nodules", "ct", "segmentation", "totalsegmentator", "lung-rads"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+dependencies = [
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "SimpleITK>=2.3",
+    "scikit-image>=0.22",
+    "TotalSegmentator>=2.4",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "ruff>=0.5",
+]
+
+[project.scripts]
+lnp-analyze = "lung_nodule_pipeline.analyze_nodules:main"
+lnp-select-thin = "lung_nodule_pipeline.select_thin_recon:main"
+lnp-print-report = "lung_nodule_pipeline.print_report:main"
+lnp-diameters = "lung_nodule_pipeline.compute_diameters:main"
+lnp-final-summary = "lung_nodule_pipeline.final_summary:main"
+
+[project.urls]
+Homepage = "https://github.com/your-org/lung-nodule-pipeline"
+Issues = "https://github.com/your-org/lung-nodule-pipeline/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]

@@ -1,0 +1,5 @@
+numpy>=1.24
+pandas>=2.0
+SimpleITK>=2.3
+scikit-image>=0.22
+TotalSegmentator>=2.4
